@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // VALUE TYPE
+        // Javascript te string, number, bigint ve boolean data tipleri value type dır
+
+        let x = 5;
+        let y = x;
+        let z = 5;
+
+        console.log(x===y);
+        console.log(x===z);
+
+
+        let name1 = "Ali";
+        let name2 = name1;
+
+        console.log(name1===name2);
+
+        name2 = "Veli";
+        console.log(name1===name2);
+
+
+        
+        // REF TYPE
+        // Javascript te object ve array referans type değişkenlerdir.
+
+        let computer1 = { cpu: "ADM", ram: 16, disk: 512 };
+        let computer2 = { cpu: "AMD", ram: 16, disk: 512 };
+        let computer3 = computer1;
+
+        console.log(computer1 === computer2);
+        console.log(computer1 === computer3);
+
+        computer1.cpu = "AMD";
+        console.log(computer1);
+        console.log(computer3);
+
+        computer3.ram = 32;
+        console.log(computer1);
+        console.log(computer3);
+
+
+       
+        console.log({} == {});
+        console.log([] == []);
+
+
+        // null object türünde olmasına rağmen value type olarak kabul edilir
+        console.log(typeof null);
+        const n1 = null;
+        const n2 = null;
+        console.log(n1 === n2);
+
+
+
+
+
+    </script>
+</body>
+</html>
