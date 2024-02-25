@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish</title>
+</head>
+<body>
+    
+    <script>
+        let salary = "kkl"*9;
+
+        // nullish
+        alert(salary ?? 15000);
+
+
+        // ternary version
+        alert(salary !== null && salary !== undefined ? salary : 15000);
+
+        // if version
+        if(salary !== null && salary !== undefined) {
+            alert(salary);
+        }
+
+
+
+        // nullish
+        // sadece null ve undefined durumunda ikinci bölüme girer.
+        salary ?? alert("Boş geçilemez 1");
+
+        // short circuit
+        salary || alert("Boş geçilemez 2");
+
+
+
+
+    </script>
+</body>
+</html>
