@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Circuit</title>
+</head>
+<body>
+    
+    <script>
+
+        const x = 5;
+        const y = 4;
+        const z = 14;
+
+        // AND &&
+        console.log( x > y && z > y && y == 4);
+        console.log( x > y && z > y && y);
+        console.log( x > y && y > z && y);
+
+
+        // short circuit
+        z>5 && z<25 && alert("Bravo süper bir giriş");
+        x===5 && z<5 && alert("Message 2");
+
+
+        // alternatif olarak if ile yapsaydık
+        /*
+        if(z>5 && z<25){
+            alert("Bravo süper bir giriş");
+        }
+        */
+
+
+
+        // OR ||
+        
+        console.log(z<y || y>x || y>z);
+        console.log(z<y || y>x || z);
+        console.log(z<y || x>y || z);
+
+        //short circuit
+        y === 35 || alert("İzmir plaka değil");
+
+
+
+
+
+        // Örnek 1
+        let isLoggedIn = true;
+        let userName = "";
+        // Eğer kullanıcı giriş yapmışsa veya kullanıcı adı girilmişse
+
+        (isLoggedIn || userName !== "") && console.log("Kullanıcı giriş yaptı veya kullanıcı adı girildi");
+
+        /*
+        if (isLoggedIn || userName !== "") {
+            console.log("Kullanıcı giriş yaptı veya kullanıcı adı girildi");
+        }
+        */
+
+
+
+
+
+        // Örnek 2
+        let isAvailable = true;
+        let isOnSale = false;
+        // Eğer ürün mevcutsa veya indirimliyse
+
+
+        (isAvailable || isOnSale) && console.log("Ürün mevcut veya indirimli");
+        
+/*
+        if (isAvailable || isOnSale) {
+        console.log("Ürün mevcut veya indirimli");
+        }
+*/
+
+
+
+    </script>
+
+
+</body>
+</html>
