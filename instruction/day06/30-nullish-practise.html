@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function setArea(a, b){
+            //console.log(a,b);
+            const result = (a ?? 0) * (b ?? 0);
+
+            // before ES6
+            /* 
+            if( a === null || a === undefined){
+                a=0;
+            }
+
+            if( b === null || b === undefined){
+                b=0;
+            }
+
+            const result = a*b; 
+            */
+
+            return result;
+        }
+
+
+        const area1 = setArea(10, 20);
+        console.log(area1);
+
+        const area2 = setArea();
+        console.log(area2);
+
+        const area3 = setArea(5);
+        console.log(area3);
+
+
+    </script>
+</body>
+</html>
