@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop Practise</title>
+</head>
+<body>
+    
+    <script>
+
+        function calculate(num){
+            num = num === 0 ? 1 : num;
+
+            if(!num || isNaN(num) || num<0){
+                alert("Negatif olmayan bir tam sayı giriniz");
+                return;
+            }
+          
+            let factoriel = 1;
+
+            // 5! = 5*4*3*2*1 
+
+            do{
+                factoriel = factoriel * num;
+                num--;
+            }
+            while(num>0)
+
+            alert(factoriel);
+        }
+
+
+        calculate(3);
+
+
+    </script>
+
+
+</body>
