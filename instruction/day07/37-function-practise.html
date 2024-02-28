@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <input type="text" id="txtNum">
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+        const txtNum = document.querySelector("#txtNum")
+        function calculate(){
+            const result = isPrimeNumber(txtNum.value);
+            if(result==="error"){
+                alert("Please enter a valid number");
+                txtNum.value="";
+                txtNum.focus();
+                return;
+            }
+            alert(`The number you entered is ${result ? 'prime' : 'not prime'}`);
+        }
+
+       
+        
+        function isPrimeNumber(num){
+            
+            if(!num || isNaN(num) || num<2){
+                return "error";
+            } 
+
+            let result = true;
+
+            for(let i=2; i<=num/2; i++){
+                if(num % i === 0){
+                    result = false;
+                    break;
+                }
+            }
+
+            return result;
+
+        }
+    </script>
+</body>
+</html>
