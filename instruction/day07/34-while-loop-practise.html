@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Practise</title>
+</head>
+<body>
+    <input type="number" id="txtNumber">
+    <button onclick="calculate2()">Calculate</button>
+
+    <script>
+
+        const txtNumber = document.querySelector("#txtNumber");
+
+        // 4589789 => 9
+        // 458978 => 8
+        // 45897 => 7
+        // 4589 => 9
+        // 458 => 8
+        // 45 => 5
+        // 4 => 4
+        // 0
+
+
+
+        function calculate(){
+            let num = Math.abs(txtNumber.value);
+            let total = 0;
+
+            while(num>0){
+                const digit = num % 10;
+                total = total + digit;
+                num = Math.floor(num/10);
+                console.log(num);
+            }
+
+            alert(total);
+        }
+
+
+        function calculate2(){
+            let num = String(Math.abs(txtNumber.value));
+            let total = 0;
+            let sayac = 0;
+
+            while(sayac<num.length){
+                total += parseInt(num.substring(sayac,sayac+1));
+                sayac++;
+            }
+
+            alert(total);
+        }
+    </script>
+
+
+</body>
+</html>
