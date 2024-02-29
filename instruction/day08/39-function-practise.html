@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Practise</title>
+</head>
+<body>
+    <button onclick="setPrice()">Set Price</button>
+    
+    <script>
+
+        const setPrice = () =>{
+            const price = prompt("Please enter the price");
+            const totalPrice = getPrice(price, 25, 18);
+            alert(`The final price is ${totalPrice}`);
+        }
+
+
+        const getPrice = (price, discountRate, taxRate) => {
+            if(!price || isNaN(price) || price<0) return;
+            if(!discountRate || isNaN(discountRate)) discountRate=0;
+            if(!taxRate || isNaN(taxRate)) taxRate=0;
+
+            if(price>1500) discountRate +=10;
+            if(discountRate<=0) taxRate=0;
+
+            const totalTax = price * taxRate / 100;
+            const totalDiscount = price * discountRate / 100; 
+            const total = price - totalDiscount + totalTax;
+            return total;
+
+            //return price - price * discountRate / 100 + price * taxRate / 100;
+        }
+
+
+        const price = getPrice(5300, 10, 5);
+        console.log(price);
+
+    </script>
+</body>
+</html>
