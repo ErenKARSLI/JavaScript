@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    
+    <script>
+        let globalScopeVariable = 21;
+
+
+        const myFunction1 = () => {
+            let functionScopeVariable = 33;
+
+            if(functionScopeVariable>0){
+                let blockScopeVariable = 50;
+                functionScopeVariable += blockScopeVariable;
+                console.log(`block variable ${blockScopeVariable} inside if block `);
+            }
+
+            console.log(`function variable ${functionScopeVariable} inside myFunction1 `);
+            console.log(`global variable ${globalScopeVariable} inside myFunction1 `);
+            //console.log(`block variable ${blockScopeVariable} inside myFunction1 `);
+        }
+
+        myFunction1();
+
+
+        console.log(`global variable ${globalScopeVariable} `);
+        //console.log(`function variable ${functionScopeVariable} outside myFunction1 `);
+        //console.log(`block variable ${blockScopeVariable} outside myFunction1 `);
+
+    </script>
+</body>
+</html>
