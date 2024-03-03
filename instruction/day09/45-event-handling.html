@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+</head>
+<body>
+    
+    <button id="btnSayHello1" onclick="sayHello1()">Say Hello 1</button>
+    <button id="btnSayHello2">Say Hello 2</button>
+    <button id="btnSayHello3">Say Hello 3</button>
+    <button id="btnSayHello4">Say Hello 4</button>
+    <button id="btnSayHello5">Say Hello 5</button>
+
+
+    <script>
+
+        // 1.YÖNTEM
+        function sayHello1() {
+            alert("Hello");
+        }
+
+
+        // 2.YÖNTEM
+        const sayHello2 = ()=>{
+            alert("Hello");
+        };
+        document.querySelector("#btnSayHello2").onclick = sayHello2;
+
+
+        // 3.YÖNTEM
+        document.querySelector("#btnSayHello3").onclick = (e) => {
+            console.log(e);
+            alert("Hello");
+        };
+
+        // 4.YÖNTEM
+        const sayHello4 = function(){
+            alert("Hello");
+        }
+
+        document.querySelector("#btnSayHello4").addEventListener("click", sayHello4);
+
+
+        // 5.YÖNTEM
+        document.querySelector("#btnSayHello5").addEventListener("click", ()=>{
+            alert("Hello");
+        });
+
+       
+
+
+
+    </script>
+
+</body>
+</html>
