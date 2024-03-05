@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+    
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe"
+        }
+
+        const aliPerson = person;
+
+        // ÜSt satırda doğrudan eşitleme yapıldığı için ve object veri tipi
+        // referans türünde olduğu için, her iki değişken de aynı nesneye referans lmaktadır
+        // birinde yapılan değişiklik diğerini de etkiler.
+
+        aliPerson.firstName = "Ali";
+        aliPerson.lastName = "Gel";
+
+        console.log(person);
+        console.log(aliPerson);
+
+        console.log(person === aliPerson);
+
+        const veliPerson = Object.create(person);
+        console.log(veliPerson.firstName);
+        veliPerson.firstName = "Veli";
+        veliPerson.lastName = "Gel";
+
+        console.log(person);
+        console.log(veliPerson);
+
+
+    </script>
+</body>
+</html>
