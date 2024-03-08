@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+</head>
+<body>
+    <select id="ddlStudents"></select>
+
+    <script>
+        const students = [
+            {
+                name: 'John',
+                age: 20,
+                gender: 'male'
+            },
+            {
+                name: 'Jane',
+                age: 21,
+                gender: 'female'
+            },
+            {
+                name: 'Mary',
+                age: 22,
+                gender: 'female'
+            }
+        ];
+
+        const fillStudents = () => {
+            const ddlStudents = document.querySelector("#ddlStudents");
+
+            for(let i=0; i<students.length; i++){
+                ddlStudents.innerHTML += `<option>${students[i].name}</option>`;
+            }
+        }
+
+        fillStudents();
+
+    </script>
+</body>
+</html>
