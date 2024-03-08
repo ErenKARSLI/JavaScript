@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <script>
+        const cars = ["Porche", "Ferrari", "Bugatti", "Tesla"];
+        console.log(cars);
+
+        const arrLength = cars.push("Audi");
+        console.log(cars);
+        console.log(arrLength);
+
+        cars.pop();
+        console.log(cars);
+
+        cars.shift();
+        console.log(cars);
+
+        cars.unshift("BMW");
+        console.log(cars);
+
+        cars.sort();
+        console.log(cars);
+
+        cars.reverse();
+        console.log(cars);
+
+        cars.splice(2, 1, "Lamborgini", "Audi", "Mini Cooper");
+        console.log(cars);
+
+
+
+    </script>
+</body>
+</html>
