@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <script>
+        const cars = ["Porche", "Ferrari", "Bugatti", "Tesla"];
+        console.log(cars);
+
+        const arr1 = cars.concat(["Audi", "Lamborgini", "Ferrari"], "Mini Coper", ["Mercedes", "Land Rover"]);
+        console.log(arr1);
+
+        console.log(cars.includes("Ferrari"));
+        console.log(cars.includes("ferrari"));
+
+        console.log(cars.indexOf("Tesla"));
+        console.log(cars.indexOf("Teslax"));
+        console.log(arr1.lastIndexOf("Ferrari"));
+
+        console.log(arr1.join("###"));
+        console.log(arr1.toString());
+
+        console.log(arr1.slice(2,4));
+
+
+    </script>
+</body>
+</html>
