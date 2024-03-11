@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteration Map</title>
+</head>
+<body>
+    
+
+    <script>
+        const animals = ["fil", "kuş", "kaplan", "deve", "fare", "aslan", "kartal"];   
+        
+        const cb = (animal) => {
+            console.log(animal);
+        }
+        
+        animals.map(cb);
+
+
+        // KISA YÖNTEM
+
+        const newAnimals = animals.map( (animal)=> {
+            if(animal.startsWith("k")){
+                return animal.toUpperCase();
+            }
+            else{
+                return "-" + animal;
+            }
+        } );
+
+        console.log(newAnimals);
+        console.log(newAnimals === animals);
+        
+
+    </script>
+
+</body>
+</html>
