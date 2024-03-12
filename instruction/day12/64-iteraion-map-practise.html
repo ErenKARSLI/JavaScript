@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteration Map Practise</title>
+</head>
+<body>
+
+    <ul>
+        <li id="try"></li>
+        <li id="eur"></li>
+        <li id="usd"></li>
+    </ul>
+    
+    <script>
+        const tryPriceList = [24000, 60000, 42000, 36000, 24500, 13250];
+        const usd = 21.79;
+        const eur = 23.53;
+
+        const eurPriceList = tryPriceList.map( (price) => (price / eur).toFixed(2) );
+        const usdPriceList = tryPriceList.map( (price) => (price / usd).toFixed(2) );
+
+        document.querySelector("#try").innerHTML = tryPriceList.join("-");
+        document.querySelector("#eur").innerHTML = eurPriceList.join("-");
+        document.querySelector("#usd").innerHTML = usdPriceList.join("-");
+
+
+    </script>
+</body>
+</html>
