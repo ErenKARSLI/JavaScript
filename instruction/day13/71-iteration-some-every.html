@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteration Some Every</title>
+</head>
+<body>
+    <script>
+        const prices = [12,454,12,67,3,87,6,213];
+
+        // Tüm elemenların price > 0 şartını sağlaması durumunda TRUE döner yoksa FALSE döner
+        if( prices.every( (price) => price > 0 ) ){
+            alert("Tüm sayılar pozitif")
+        }
+
+        //  En az bir elemenın price < 0 şartını sağlaması durumunda TRUE döner yoksa FALSE döner
+
+        if( prices.some ( (price)=> price<0 )){
+            alert("En az 1 eleman negatif")
+        }
+    </script>
+</body>
+</html>
