@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteration Reduce</title>
+</head>
+<body>
+    
+    <script>
+       
+
+        const arr = [23,5,76,3];
+
+        const sum = arr.reduce( (t, n) => { 
+            //console.log(t,n);
+            return t + n;
+        } , 0 );
+        
+        console.log(sum);
+
+
+        const multiply = arr.reduce( (t, n) => { 
+            //console.log(t,n);
+            return t * n;
+        } , 1 );
+        console.log(multiply);
+
+    </script>
+</body>
+</html>
