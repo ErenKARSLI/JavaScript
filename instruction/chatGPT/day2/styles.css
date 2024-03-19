@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.5s;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sağa doğru 250 piksel kaydırıldı */
+    width: 280px; /* Menü genişliği artırıldı */
+    height: 100%;
+    background-color: #ff5d5d;
+    color: #fff;
+    padding: 10px;
+    transition: left 0.5s;
+}
+
+.menu.open {
+    left: 0;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px; /* Yazıları hizalayıp menü  ile iç içe olmasını engeller */
+}
+
+.menu ul li {
+    margin-bottom: 25px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.4s; /* Büyüme efekti için geçiş efekti ekle */
+}
+
+.menu ul li a:hover {
+    color: rgb(0, 0, 0);
+    transform: scale(2.0); /* Üzerine gelindiğinde 1.5 kat büyüt */
+}
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+.menu.open + .content {
+    margin-left: 250px; /* Menü açıldığında içerik sağa doğru kaydırılıyor */
+}
+
+#toggleMenu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    z-index: 1; /* Diğer içeriklerin üzerinde olmasını sağlar */
+}
+#toggleMenu {
+    /* Diğer stiller */
+    color: #000; /* İkon rengi */
+}
+
+/* İkon boyutu */
+#toggleMenu i {
+    font-size: 24px;
+}
+#toggleMenu.rotate {
+    transform: rotate(90deg); /* İkonu 90 derece döndür */
+    transition: transform 0.5s; /* Dönüşümü animasyonla gerçekleştir */
+}
+.header {
+    color: #c00000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.search-container {
+    display: inline-block;
+    position: relative;
+}
+
+.search-container input[type="text"] {
+    padding: 10px 15px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s; /* Geçiş efekti */
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #007bff; /* Odaklandığında kenarlık rengini değiştir */
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Üzerine gelindiğinde arka plan rengini değiştir */
+}
