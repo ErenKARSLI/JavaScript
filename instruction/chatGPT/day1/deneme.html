@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="menu-container">
+<div class="menu-container" id="menuContainer">
   <button class="menu-toggle" id="menuToggle">&#9776;</button>
   <nav class="menu" id="menu">
     <ul>
@@ -20,23 +20,25 @@
   </nav>
 </div>
 
-<div class="search-container">
-  <input type="text" placeholder="Ara...">
-  <button type="submit">Ara</button>
-</div>
+<div class="content">
+  <div class="search-container">
+    <input type="text" placeholder="Ara...">
+    <button type="submit">Ara</button>
+  </div>
 
-<div class="product-grid">
-  <div class="product-item">
-    <img src="product1.jpg" alt="Ürün 1">
-    <h3>Ürün İsmi 1</h3>
-    <p>Fiyat: 100 TL</p>
+  <div class="product-grid">
+    <div class="product-item">
+      <img src="product1.jpg" alt="Ürün 1">
+      <h3>Ürün İsmi 1</h3>
+      <p>Fiyat: 100 TL</p>
+    </div>
+    <div class="product-item">
+      <img src="product2.jpg" alt="Ürün 2">
+      <h3>Ürün İsmi 2</h3>
+      <p>Fiyat: 150 TL</p>
+    </div>
+    <!-- Diğer ürünler buraya eklenebilir -->
   </div>
-  <div class="product-item">
-    <img src="product2.jpg" alt="Ürün 2">
-    <h3>Ürün İsmi 2</h3>
-    <p>Fiyat: 150 TL</p>
-  </div>
-  <!-- Diğer ürünler buraya eklenebilir -->
 </div>
 
 <script src="script.js"></script>
