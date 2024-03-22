@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <header><h1>DOM</h1></header>
+
+    <main>
+        <ul id="employeeList" class="list"><!-- comment -->
+            <li>Lorem. <span>➡️</span></li>
+            <li>Reprehenderit.<span>➡️</span></li>
+            <li>Aut.<span>➡️</span></li>
+            <li>Dignissimos.<span>➡️</span></li>
+            <li>Consectetur.<span>➡️</span></li>
+        </ul>
+    </main>
+
+    
+    <script>
+        const spanEls = document.querySelectorAll(".list li span");
+        
+        spanEls.forEach( (span)=> { 
+            span.addEventListener("click", (e)=> {
+                const li = e.target.closest("li");
+                li.style.backgroundColor = "yellow";
+            })
+        } )
+
+
+        // closest parentlarda arar, parent yapısı içinde olmayan elemanlara ortak parent üzerinden erişilebilir.
+        const header = document.querySelector(".list li:nth-child(4)").closest("body").querySelector("header");
+        console.log(header);
+
+
+
+        //children
+        const employeeList = document.getElementById("employeeList");
+        console.log(employeeList); 
+        console.log(employeeList.children);
+
+        // childNodes
+        // içinde element, text, attribute, comment gibi çok farklı yapıları bulundurur.
+        console.log(employeeList.childNodes);
+
+        console.log(employeeList.firstElementChild);
+        console.log(employeeList.lastElementChild);
+        console.log(employeeList.parentElement.parentElement);
+
+        const li3 = document.querySelector("#employeeList li:nth-child(3)");
+        console.log(li3.previousElementSibling);
+        console.log(li3.nextElementSibling);
+
+
+
+        
+    </script>
+
+
+</body>
+</html>
