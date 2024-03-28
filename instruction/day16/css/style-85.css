@@ -1,0 +1,21 @@
+.search-bar{
+    position: relative;
+}
+
+.search-bar ul{
+    position: absolute;
+    right:0;
+    left:0;
+    z-index: 99;
+    border:1px solid #cecece;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin:0;
+    padding: 10px 20px;
+    list-style-type: none;
+    line-height: 30px;
+    display: none;
+}
