@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Practise</title>
+</head>
+<body>
+
+    <h1 id="lblWelcomeMessage"></h1>
+    <p><em id="lblCounter"></em></p>
+
+
+    <form action="">
+        <input type="text" id="txtName" placeholder="Enter your name">
+        <button id="btnSave">Save</button>
+    </form>
+
+    <script>
+
+        const handleCounter = () =>{
+            let count = localStorage.getItem("pageCounter");
+            //count = count ? parseInt(count) : 0;
+            //count = count ?? 0;
+            count ??= 0;
+            count++;
+            localStorage.setItem("pageCounter", count);
+            document.getElementById("lblCounter").innerHTML = `Uygulamımıza ${count}.kere giriş yaptınız`;
+        }
+
+        const handleMessage = () => {
+            const name = localStorage.getItem("name");
+            document.getElementById("lblWelcomeMessage").innerHTML = `Welcome to my app, ${name ?? "Guest"}`;
+        }
+
+        document.getElementById("btnSave").addEventListener("click", ()=>{
+            const txtName = document.getElementById("txtName");
+            localStorage.setItem("name", txtName.value);
+        })
+
+
+        handleCounter();
+        handleMessage();
+
+    </script>
+
+    
+</body>
+</html>
