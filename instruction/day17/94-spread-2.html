@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    
+
+    <script>
+        let cities = ["Ankara", "İstanbul", "London", "Helsinki", "Tokyo"];
+        console.log(cities);
+        cities = ["Zurih", ...cities, "Marsilya"];
+        console.log(cities);
+
+
+        let countries1 = ["Germany", "Denmark", "Italy", "France"];
+        let countries2 = ["Turkey", "China", "Russia", "Germany"];
+
+        let countries = [...countries1, "Belgium", ...countries2];
+        console.log(countries);
+
+        // new Set, dizideki tekrar eden aynı elemanları silip hepsinden tek olacak hale geitir
+        let uniqueCountries = [...new Set(countries)];
+        console.log(uniqueCountries);
+
+
+
+    </script>
+
+</body>
+</html>
