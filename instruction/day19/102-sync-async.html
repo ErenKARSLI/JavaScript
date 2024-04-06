@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const sum = (a, b) =>{
+            
+            setTimeout( ()=> {
+                const total = a + b;
+                console.log(total);
+                return total;
+            },1);
+            
+        }
+
+        /*
+            Asenkron yapılardan geri değer döndürme işlemi bu şekilde olmaz
+            Çünkü her asenkron kod bloğu ayrı thread lerde çalıştığı için javascript
+            o kodun bitmesini beklemeden kaldığı yerden çalışmaya devam eder.
+            Böylece asenkron taraftan cevap dönse bile yakalanamaz.
+        */
+
+
+        console.log("Sayıların toplamı:");
+        const total = sum(15,25);
+        console.log(total);
+
+
+    </script>
+</body>
+</html>
