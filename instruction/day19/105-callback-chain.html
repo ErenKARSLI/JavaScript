@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Chain</title>
+</head>
+<body>
+
+
+    <script>
+        const siparisVer = (cb) => {
+            console.log("Sipariş verildi");
+            setTimeout(()=>{
+                console.log("Sipariş hazır");
+                cb();
+            },3000);
+        }
+
+        const yemekYe = (cb) => {
+            console.log("Yemeğe başladık");
+            setTimeout(()=>{
+                console.log("Yemek yendi");
+                cb();
+            },200);
+        }
+
+        const filmIzle = () => {
+            console.log("Film başladı");
+            setTimeout(()=>{
+                console.log("Film bitti");
+            },2000);
+        }
+
+        const patlakMisirYe = () => {
+            console.log("Patlak mısır yemeğe başladık");
+            setTimeout(()=>{
+                console.log("PAtlak mısır bitti");
+            },1500);
+        }
+
+
+        // callback chain
+        
+        siparisVer( ()=> {
+            yemekYe( ()=>{
+                filmIzle();
+                patlakMisirYe();
+            } );
+        });
+
+         
+
+
+    </script>
+    
+</body>
+</html>
