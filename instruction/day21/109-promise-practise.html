@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Practise</title>
+</head>
+<body>
+
+    <button id="btn">Click Me</button>
+    
+
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+            confirmAsync("Are you sure to delete?")
+            .then( (res)=>{
+                console.log(res);
+            } );
+
+
+            console.log("Hello Promise");
+        });
+
+
+        const confirmAsync = (msg) => {
+            // Promise in kendisi asenkron değil, asenkron yapılardan 
+            // sağlıklı bir şekilde veri döndürürken kullanılan callback alternatifi bir yapı
+
+            return new Promise( (resolve)=>{
+                setTimeout(()=>{
+                    const result = confirm(msg);
+                    resolve(result);
+                }, 0);
+            } );
+        }
+
+
+    </script>
+</body>
+</html>
