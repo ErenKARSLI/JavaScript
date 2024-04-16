@@ -43,6 +43,7 @@ populateProductOptions();
 
 function showAddProductPanel() {
     document.getElementById('addProductPanel').style.display = 'block';
+    populateCategoryOptions();
 }
 
 function hideAddProductPanel() {
