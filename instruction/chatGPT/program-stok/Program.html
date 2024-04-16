@@ -45,12 +45,7 @@
     <input type="text" id="productName">
     <label for="category">Kategori:</label>
     <select id="category">
-        <option value="kozmetik">Kozmetik</option>
-        <option value="bakım">Bakım</option>
-        <option value="hijyen">Hijyen</option>
-        <option value="tekstil">Tekstil</option>
-        <option value="temizlik">Temizlik</option>
-        <option value="gıda">Gıda</option>
+        <!-- Kategoriler burada dinamik olarak oluşturulacak -->
     </select>
     <label for="stockAmount">Stok Miktarı:</label>
     <input type="number" id="stockAmount">
@@ -60,20 +55,21 @@
     </div>
     <button onclick="addProduct()">Ürün Ekle</button>
 </div>
-    <div class="panel" id="addStockPanel">
-        <span class="close-btn" onclick="hideAddStockPanel()">X</span>
-        <h2>Stok Ekleme Paneli</h2>
-        <label for="category">Kategori:</label>
-        <select id="category">
-        </select>
-        <label for="stockAmount">Stok Miktarı:</label>
-        <input type="number" id="stockAmount">
-        <div>
-            <label>Toplam Stok:</label>
-            <span id="totalStock">0</span>
-        </div>
-        <button onclick="addStock()">Stok Ekle</button>
+
+<div class="panel" id="addStockPanel">
+    <span class="close-btn" onclick="hideAddStockPanel()">X</span>
+    <h2>Stok Ekleme Paneli</h2>
+    <label for="category">Kategori:</label>
+    <select id="category">
+        <!-- Kategoriler burada dinamik olarak oluşturulacak -->
+    </select>
+    <label for="stockAmount">Stok Miktarı:</label>
+    <input type="number" id="stockAmount">
+    <div>
+        <label>Toplam Stok:</label>
+        <span id="totalStock">0</span>
     </div>
+    <button onclick="addStock()">Stok Ekle</button>
 </div>
 
 <script src="script.js"></script>
