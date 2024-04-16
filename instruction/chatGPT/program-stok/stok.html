@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İki Bölümlü Sayfa</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container">
+    <div id="left">
+        <h2>Bağlantılar</h2>
+        <ul>
+            <li><a href="#" onclick="showContent('content1')">İçerik 1</a></li>
+            <li><a href="#" onclick="showContent('content2')">İçerik 2</a></li>
+            <li><a href="#" onclick="showContent('content3')">İçerik 3</a></li>
+            <li><a href="#" onclick="showContent('content4')">İçerik 4</a></li>
+            <li><a href="#" onclick="showContent('content5')">İçerik 5</a></li>
+            <li><a href="#" onclick="showContent('content6')">İçerik 6</a></li>
+        </ul>
+    </div>
+    <div id="right">
+        <div id="content1" style="display:none;">
+            <div class="half" id="part1">
+                <h2>İçerik 1 - Kısım 1</h2>
+                <p>Bu, İçerik 1'in ilk kısmının açıklamasıdır</p>
+            </div>
+            <div class="half" id="part2">
+                <h2>İçerik 1 - Kısım 2</h2>
+                <p>Bu, İçerik 1'in ikinci kısmının açıklamasıdir.</p>
+            </div>
+        </div>
+        <div id="content2" style="display:none;">
+            <h2>İçerik 2</h2>
+            <p>Bu, İçerik 2'nin açıklamasıdır.</p>
+        </div>
+        <div id="content3" style="display:none;">
+            <h2>İçerik 3</h2>
+            <p>Bu, İçerik 3'ün açıklamasıdır.</p>
+        </div>
+        <div id="content4" style="display:none;">
+            <h2>İçerik 4</h2>
+            <p>Bu, İçerik 4'ün açıklamasıdır.</p>
+        </div>
+        <div id="content5" style="display:none;">
+            <h2>İçerik 5</h2>
+            <p>Bu, İçerik 5'in açıklamasıdır.</p>
+        </div>
+        <div id="content6" style="display:none;">
+            <h2>İçerik 6</h2>
+            <p>Bu, İçerik 6'nın açıklamasıdır.</p>
+        </div>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>

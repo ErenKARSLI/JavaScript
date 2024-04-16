@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+#left {
+    width: 15%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+#right {
+    width: 85%; /* Önceki değer: 70% */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #333;
+}
+
+li a:hover {
+    color: #555;
+}
+
+#right > div {
+    display: none;
+}
+
+#right > div:first-child {
+    display: block;
+}
+
+.half {
+    width: 100%; /* Önceki değer: 45% */
+    box-sizing: border-box;
+    padding: 10px;
+}
+.half:nth-child(even) {
+    background-color: #f9f9f9;
+}
