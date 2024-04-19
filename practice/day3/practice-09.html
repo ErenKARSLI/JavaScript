@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <style>
+        .container{
+            padding: 1rem;
+            background-color: rgb(167, 207, 157);
+            width: 50%;
+        }
+    .container input,.container button{
+        padding: 0.5rem;
+        margin: 0.3rem;
+        font-size:1.2rem ;
+    }
+    .container label{
+        font-size: 1.2rem;
+        margin-right:0.5rem;
+    }
+    .container #mesaj{
+    
+        margin-top: 2rem;
+        width: 400px;
+        padding: 2rem;
+        color: rgb(4, 0, 7);
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .yesil{
+        background-color: rgb(30, 128, 0);
+    }
+    
+    .kirmizi{
+        background-color: red;
+    }
+    
+    .sari{
+        background-color: rgb(233, 233, 11);
+    }
+    
+    .invisible{
+        display: none;
+    }
+    
+    
+    
+    
+    
+    </style>
+
+
+  </head>
+  <body>
+
+ 
+    <div class="container">
+      <input type="number" id="yas" name="yas" placeholder="yasinizi giriniz" />
+
+      <input type="radio" name="cinsiyet" id="erkek" checked />
+      <label for="erkek">Erkek</label>
+
+      <input type="radio" name="cinsiyet" id="kadin" />
+      <label for="kadin">Kadin</label>
+
+      <button type="button " onclick="durum()">Askerlik Durumu</button>
+      <button type="reset" onclick="sil()">Temizle</button>
+      <p id="sonuc"></p>
+    </div>
+
+
+    <script src="../day03/js/app-09.js"></script>
+  </body>
+</html>
