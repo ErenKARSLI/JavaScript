@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+<link rel="stylesheet" href="../day05/assets/css/style-14.css">
+  
+  </head>
+  <body>
+   
+    <div class="screen-container">
+      <div class="screen-header">
+        <div class="screen">
+          <span id="screen-text">p$mR!D;GnR%TR?</span>
+        </div>
+      </div>
+      <div class="screen-body">
+        <div class="form-control">
+          <label for="pwd-length">Password Length</label>
+          <input id="pwd-length" value="15" type="number" min="4" max="30" />
+        </div>
+        <div class="form-control">
+          <label for="upperCase">Contains uppercase letter</label>
+          <input id="upperCase" type="checkbox" />
+        </div>
+        <div class="form-control">
+          <label for="lowerCase">Contains lowercase letter</label>
+          <input id="lowerCase" type="checkbox" />
+        </div>
+        <div class="form-control">
+          <label for="number">Contains number</label>
+          <input id="number" type="checkbox" />
+        </div>
+        <div class="form-control">
+          <label for="symbol">Contains symbol</label>
+          <input id="symbol" type="checkbox" />
+        </div>
+        <button class="generate" id="generate">Generate Password!</button>
+      </div>
+    </div>
+
+    <script src="../day05/assets/js/app-14.js"></script>
+
+  </body>
+</html>
