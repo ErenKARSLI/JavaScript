@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Practice - 22</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      .menumuz span{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center mt-2">Yemek Menümüz</h2>
+      <div class="menumuz col-12 fs-5 fw-semibold m-3 d-flex gap-5 justify-content-center">
+        <span class="urun text-danger" data-menulerim="hepsi">Tüm Çeşitlerimiz</span>
+        <span class="urun" data-menulerim="tatli">Tatlılar</span>
+        <span class="urun" data-menulerim="icecek">İçecekler</span>
+        <span class="urun" data-menulerim="yemek">Yemekler</span>
+      </div>
+      <div class="row  gap-4 justify-content-center">
+        <div class="yemeklerimiz tatli col-md-5 col-lg-3">
+          <div class="card  h-100">
+            <img src="./img/tatli1.jpg" class="card-img-top" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Tatlı - 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="yemeklerimiz tatli col-md-5 col-lg-3">
+          <div class="card  h-100">
+            <img src="./img/tatli2.jpg" class="card-img-top" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Tatlı - 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="yemeklerimiz icecek col-md-5 col-lg-3">
+          <div class="card  h-100">
+            <img src="./img/icecek1.jpg" class="card-img-top" />
+            <div class="card-body text-center">
+              <h5 class="card-title">İçecek - 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="yemeklerimiz icecek col-md-5 col-lg-3">
+          <div class="card  h-100">
+            <img src="./img/icecek2.jpg" class="card-img-top" />
+            <div class="card-body text-center">
+              <h5 class="card-title">İçecek - 2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="yemeklerimiz yemek col-md-5 col-lg-3">
+          <div class="card  h-100">
+            <img src="./img/yemek1.jpg" class="card-img-top" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Yemek - 1</h5>
+            </div>
+          </div>
+        </div>
+        <div class="yemeklerimiz yemek col-md-5 col-lg-3">
+          <div class="card  h-100">
+            <img src="./img/yemek2.jpg" class="card-img-top" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Yemek - 2</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app-22.js"></script>
+  </body>
+</html>
