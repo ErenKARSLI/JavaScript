@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Practice - 23</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      #ekle,
+      #sil {
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="d-flex gap-3 mb-3">
+        <input type="text" name="yeni" id="yeni" class="w-25" />
+        <input
+          type="button"
+          class="btn btn-success"
+          value="Listem"
+          id="ekle"
+          name="ekle"
+        />
+        <input
+          type="button"
+          class="btn btn-danger"
+          value="Sil"
+          id="sil"
+          name="sil"
+        />
+      </div>
+      <div class="p-2 m-2 card">
+        <p><b>Yapılacaklar : </b><span id="metin"></span></p>
+      </div>
+      <ul id="liste"></ul>
+    </div>
+    <script src="app-23.js"></script>
+  </body>
+</html>
